@@ -21,10 +21,7 @@ public class MyBookSharedTest implements CommandLineRunner {
         String title = scanner.nextLine();
 
         BookDataDTO bookDataDTO = openLibraryMapper.getBookDataDto(title);
-
         System.out.println(bookDataDTO);
-
-
 
     }
 }

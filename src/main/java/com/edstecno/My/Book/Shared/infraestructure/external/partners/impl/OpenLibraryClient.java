@@ -23,9 +23,9 @@ public class OpenLibraryClient {
 
     // Vai ser um BookDataDTO no final assim: public BookDataDTO getByTitle
     public String getByTitle (String title) {
-        //String contentURL = URL+"title="+title;
-        String contentURL = "https://openlibrary.org/search.json?title=Dom+Quixote";
-        System.out.println(" --  Como Ficou a URL --");
+        String contentURL = "https://openlibrary.org/search.json?title=";
+        title = title.replace(" ", "+");
+        contentURL += title;
         System.out.println(contentURL);
         HttpRequest request = RequestBuilder(contentURL);
         try {
